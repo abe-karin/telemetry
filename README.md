@@ -103,32 +103,31 @@ Princípios adotados:
 
 ## 🔍 Observabilidade
 Logs
-Formato JSON
-Um log para cada evento criado
-Facilmente integrável a stacks de logging
-
-Métricas (Prometheus)
+- Formato JSON
+- Um log para cada evento criado
+- Facilmente integrável a stacks de logging
+- Métricas (Prometheus)
 
 Métricas técnicas:
-Total de requisições
-Latência por endpoint
-Métricas de domínio:
-Total de ações
-Ações por tipo
-Ações por origem
-Métricas são usadas para padrões e alertas, não para análise detalhada.
+- Total de requisições
+- Latência por endpoint
+- Métricas de domínio:
+- Total de ações
+- Ações por tipo
+- Ações por origem
+- Métricas são usadas para padrões e alertas, não para análise detalhada.
 
 ## 📊 Análise de dados
 
 Os eventos persistidos em SQLite são analisados via Jupyter Notebook, permitindo:
 
-Identificação de padrões de uso
-Análise temporal
-Exploração de metadata
-Geração de insights sem alterar o código do serviço
-Essa separação demonstra a diferença entre:
-Observabilidade em tempo real
-Análise histórica de dados
+- Identificação de padrões de uso
+- Análise temporal
+- Exploração de metadata
+- Geração de insights sem alterar o código do serviço
+- Essa separação demonstra a diferença entre:
+- Observabilidade em tempo real
+- Análise histórica de dados
 
 ## 🐳 Execução com Docker
 Subir o ambiente completo
@@ -138,9 +137,10 @@ docker compose up --build
 ```
 
 ##  Serviços disponíveis
+```
 API: http://localhost:8000/docs
 Métricas: http://localhost:8000/metrics
 Prometheus: http://localhost:9090
-
+```
 
 
