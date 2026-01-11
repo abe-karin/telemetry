@@ -32,7 +32,7 @@ Esses eventos:
 ---
 
 ## 🏗️ Arquitetura (visão lógica)
-
+```
 Cliente
 ↓
 API (FastAPI)
@@ -46,8 +46,7 @@ Métricas (Prometheus)
 Persistência (SQLite)
 ↓
 Análise (Jupyter Notebook)
-
-
+```
 ---
 
 ## 📦 Estrutura do projeto
@@ -82,6 +81,8 @@ telemetry-mini-service/
 ├── docker-compose.yml
 ├── requirements.txt
 └── README.md
+
+```
 
 🧩 Evento de domínio
 UserActionEvent
