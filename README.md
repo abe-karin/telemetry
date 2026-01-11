@@ -84,83 +84,62 @@ telemetry-mini-service/
 
 ```
 
-🧩 Evento de domínio
+## 🧩 Evento de domínio
 UserActionEvent
+```
 event_id   : UUID
 user_id    : string
 action     : string
 timestamp  : datetime (UTC)
 source     : string
 metadata   : JSON (livre)
+```
 
+Princípios adotados:
+- Eventos são imutáveis
+- Eventos descrevem fatos, não interpretações
+- metadata é flexível por design
+- O evento não depende de banco ou framework
 
-Princípios adotados
-
-Eventos são imutáveis
-
-Eventos descrevem fatos, não interpretações
-
-metadata é flexível por design
-
-O evento não depende de banco ou framework
-
-🔍 Observabilidade
+## 🔍 Observabilidade
 Logs
-
 Formato JSON
-
 Um log para cada evento criado
-
 Facilmente integrável a stacks de logging
 
 Métricas (Prometheus)
 
 Métricas técnicas:
-
 Total de requisições
-
 Latência por endpoint
-
 Métricas de domínio:
-
 Total de ações
-
 Ações por tipo
-
 Ações por origem
-
 Métricas são usadas para padrões e alertas, não para análise detalhada.
 
-📊 Análise de dados
+## 📊 Análise de dados
 
 Os eventos persistidos em SQLite são analisados via Jupyter Notebook, permitindo:
 
 Identificação de padrões de uso
-
 Análise temporal
-
 Exploração de metadata
-
 Geração de insights sem alterar o código do serviço
-
 Essa separação demonstra a diferença entre:
-
 Observabilidade em tempo real
-
 Análise histórica de dados
 
-🐳 Execução com Docker
+## 🐳 Execução com Docker
 Subir o ambiente completo
+
 ```
 docker compose up --build
 ```
 
-Serviços disponíveis
-
+##  Serviços disponíveis
 API: http://localhost:8000/docs
-
 Métricas: http://localhost:8000/metrics
-
 Prometheus: http://localhost:9090
 
 
